@@ -1,0 +1,28 @@
+{
+  "root": "apps/animate-react-pixi-demo1-e2e",
+  "sourceRoot": "apps/animate-react-pixi-demo1-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/animate-react-pixi-demo1-e2e/cypress.json",
+        "devServerTarget": "animate-react-pixi-demo1:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "animate-react-pixi-demo1:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/animate-react-pixi-demo1-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["animate-react-pixi-demo1"]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "animate-react-pixi-demo1": "apps/animate-react-pixi-demo1",
+    "animate-react-pixi-demo1-e2e": "apps/animate-react-pixi-demo1-e2e"
+  }
+}

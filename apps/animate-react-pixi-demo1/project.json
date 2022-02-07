@@ -1,0 +1,75 @@
+{
+  "root": "apps/animate-react-pixi-demo1",
+  "sourceRoot": "apps/animate-react-pixi-demo1/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/animate-react-pixi-demo1",
+        "index": "apps/animate-react-pixi-demo1/src/index.html",
+        "baseHref": "/",
+        "main": "apps/animate-react-pixi-demo1/src/main.tsx",
+        "polyfills": "apps/animate-react-pixi-demo1/src/polyfills.ts",
+        "tsConfig": "apps/animate-react-pixi-demo1/tsconfig.app.json",
+        "assets": [
+          "apps/animate-react-pixi-demo1/src/favicon.ico",
+          "apps/animate-react-pixi-demo1/src/assets"
+        ],
+        "styles": [],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/animate-react-pixi-demo1/src/environments/environment.ts",
+              "with": "apps/animate-react-pixi-demo1/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "animate-react-pixi-demo1:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "animate-react-pixi-demo1:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/animate-react-pixi-demo1/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/animate-react-pixi-demo1"],
+      "options": {
+        "jestConfig": "apps/animate-react-pixi-demo1/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
