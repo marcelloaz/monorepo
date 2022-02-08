@@ -5,7 +5,11 @@
  Delete this file and get started with your project!
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
+
+
+
 export function NxWelcome({ title }: { title: string }) {
+
   return (
     <>
       <style
@@ -415,11 +419,11 @@ export function NxWelcome({ title }: { title: string }) {
       />
       <div className="wrapper">
         <div className="container">
-          <div id="welcome">
-            <h1>
+          <div className="app" id="welcome">
+          <div className="box" ><h1>
               <span> Hello there, </span>
               Welcome {title} 👋
-            </h1>
+            </h1></div>
           </div>
 
           <div id="hero" className="rounded">
